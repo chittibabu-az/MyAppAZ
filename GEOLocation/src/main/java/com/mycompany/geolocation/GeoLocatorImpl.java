@@ -195,6 +195,7 @@ public class GeoLocatorImpl implements GeoLocator {
             conn = urlInstance.openConnection();
             return conn;   
         } catch (IOException e) {
+            System.err.println(e);
             return null;   
         }
     }
