@@ -210,12 +210,6 @@ public class GeoLocatorImpl implements GeoLocator {
      * @return URLConnection Instance if it is open.
      */
     public boolean getURLConnection() {
-        String host = "182.73.212.174";
-        String port = "8080";
-        System.out.println("Using proxy: " + host + ":" + port);
-        System.setProperty("http.proxyHost", host);
-        System.setProperty("http.proxyPort", port);
-        System.setProperty("http.nonProxyHosts", "localhost|127.0.0.1");
         URLConnection conn;
         try {
             String connURL = url.concat(ip);
