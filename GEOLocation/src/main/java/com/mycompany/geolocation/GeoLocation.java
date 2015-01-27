@@ -37,7 +37,12 @@ final class GeoLocation {
         System.out.println("Location search is completed");
     }
     
-    public static void getAddress(Location location) {        
+    /**
+     * Show address based on IP address.
+     * 
+     * @param location object.
+     */
+    public static void getAddress(final Location location) {           
         System.out.println(location.getIpValue());
         System.out.println(location.getCityName());
         System.out.println(location.getRegionCode());

@@ -16,7 +16,7 @@ public interface GeoLocator {
     /**
      * locate address using ip address.
      * @param ip is an parameter.
-     * @return 
+     * @return location object.
      * @throws IOException as message
      */
     Location locate(final String ip)  throws IOException;
