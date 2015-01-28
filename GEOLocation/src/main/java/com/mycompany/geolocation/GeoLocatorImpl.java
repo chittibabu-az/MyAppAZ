@@ -260,12 +260,17 @@ public class GeoLocatorImpl implements GeoLocator {
      * @return boolean value.
      */
     public boolean isEventReader() {
+        System.out.println("####"+inputStream);
         try {
+            if(getURLConnection()) {
             //XML Input Factory object.
             XMLInputFactory inputFactory = XMLInputFactory.newInstance();
             //XML Event reader object.
             eventReader = inputFactory.createXMLEventReader(inputStream);
             return eventReader.hasNext();
+            } else {
+                return false;
+            }
         } catch (XMLStreamException e) {
             System.err.println(e);
             return false;
