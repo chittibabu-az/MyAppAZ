@@ -16,8 +16,7 @@ final class GeoLocation {
     private GeoLocation() {
         
     }
-    /**
-     * GGGGGGGGGGGGGGGGGGGGGGGGGGG.
+    /**     * 
      * Find address execute method. 
      * @param arg is console argument.
      * @throws IOException is exception.
