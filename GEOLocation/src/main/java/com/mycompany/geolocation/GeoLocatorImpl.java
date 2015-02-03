@@ -169,6 +169,9 @@ public class GeoLocatorImpl implements GeoLocator {
             if (!getURLConnection()) {
                 throw new IOException("URL Connection Fail.");
             }
+            if (xmlParsing()) {
+                throw new IOException("XML parsing exception.");
+            }
             location = locationList;
             return location;
         } catch (IOException e) {
@@ -260,14 +263,13 @@ public class GeoLocatorImpl implements GeoLocator {
      * @return boolean value.
      */
     public boolean isEventReader() {
-        System.out.println("####"+inputStream);
         try {
-            if(getURLConnection()) {
-            //XML Input Factory object.
-            XMLInputFactory inputFactory = XMLInputFactory.newInstance();
-            //XML Event reader object.
-            eventReader = inputFactory.createXMLEventReader(inputStream);
-            return eventReader.hasNext();
+            if (getURLConnection()) {
+                //XML Input Factory object.
+                XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+                //XML Event reader object.
+                eventReader = inputFactory.createXMLEventReader(inputStream);
+                return eventReader.hasNext();
             } else {
                 return false;
             }
