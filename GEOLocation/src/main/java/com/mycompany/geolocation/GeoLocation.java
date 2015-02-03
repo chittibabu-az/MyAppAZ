@@ -30,6 +30,7 @@ final class GeoLocation {
         GeoLocator geoLocator = new GeoLocatorImpl();
         getAddress(geoLocator.locate(ipValue));
         System.out.println("Location search is completed");
+        System.out.println("Location search is completed");
     }
     
     /**
