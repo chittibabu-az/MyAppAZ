@@ -82,7 +82,7 @@ public class Location {
     /**
      * Set country code.
      *
-     * @param countryCodeParams
+     * @param countryCodeParams as string.
      */
     public void setCountryCode(final String countryCodeParams) {
         this.countryCode = countryCodeParams;
@@ -100,7 +100,7 @@ public class Location {
     /**
      * set country name.
      *
-     * @param countryNameParams
+     * @param countryNameParams as string.
      */
     public void setCountryName(final String countryNameParams) {
         this.countryName = countryNameParams;
@@ -118,7 +118,7 @@ public class Location {
     /**
      * set region code.
      *
-     * @param regionCodeParams
+     * @param regionCodeParams as string.
      */
     public void setRegionCode(final String regionCodeParams) {
         this.regionCode = regionCodeParams;
@@ -136,7 +136,7 @@ public class Location {
     /**
      * Set Region Name.
      *
-     * @param regionNameParams
+     * @param regionNameParams as string.
      */
     public void setRegionName(final String regionNameParams) {
         this.regionName = regionNameParams;
@@ -154,7 +154,7 @@ public class Location {
     /**
      * Set City Name.
      *
-     * @param cityNameParams
+     * @param cityNameParams as string.
      */
     public void setCityName(final String cityNameParams) {
         this.cityName = cityNameParams;
@@ -172,7 +172,7 @@ public class Location {
     /**
      * Set Zip Code.
      *
-     * @param zipCodeParams
+     * @param zipCodeParams as string.
      */
     public void setZipCode(final String zipCodeParams) {
         this.zipCode = zipCodeParams;
@@ -190,7 +190,7 @@ public class Location {
     /**
      * Set Time Zone.
      *
-     * @param timeZoneParams
+     * @param timeZoneParams as string.
      */
     public void setTimeZone(final String timeZoneParams) {
         this.timeZone = timeZoneParams;
@@ -208,7 +208,7 @@ public class Location {
     /**
      * Set latitude.
      *
-     * @param latitudeValueParams
+     * @param latitudeValueParams as string.
      */
     public void setLatitudeValue(final String latitudeValueParams) {
         this.latitudeValue = latitudeValueParams;
@@ -226,7 +226,7 @@ public class Location {
     /**
      * Set Longitude.
      *
-     * @param longitudeValueParams
+     * @param longitudeValueParams as string.
      */
     public void setLongitudeValue(final String longitudeValueParams) {
         this.longitudeValue = longitudeValueParams;
@@ -244,7 +244,7 @@ public class Location {
     /**
      * Set Metro Code.
      *
-     * @param metroCodeParams
+     * @param metroCodeParams as string.
      */
     public void setMetroCode(final String metroCodeParams) {
         this.metroCode = metroCodeParams;
