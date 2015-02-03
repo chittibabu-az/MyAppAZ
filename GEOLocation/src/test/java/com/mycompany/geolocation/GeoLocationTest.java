@@ -82,7 +82,7 @@ public class GeoLocationTest {
 
     @Test
     public void xmlParsingOk() throws XMLStreamException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://freegeoip.net/xml/", "4.2.2.2");
         geoLocator.isEventReader();
         Assert.assertEquals(geoLocator.xmlParsing(), true);
     }
