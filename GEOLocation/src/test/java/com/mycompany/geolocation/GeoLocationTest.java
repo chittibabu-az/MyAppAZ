@@ -32,7 +32,7 @@ public class GeoLocationTest {
 
     @Test
     public void isLocate() throws IOException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8081/", "");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "");
         Location location = new Location();
         location = geoLocator.locate("");
         Assert.assertEquals(geoLocator.locate(""), location);
@@ -40,7 +40,7 @@ public class GeoLocationTest {
 
     @Test
     public void isNotLocate() throws IOException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8081/", "");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "");
         Assert.assertEquals(geoLocator.locate("4.2.2.2"), null);
     }
 
@@ -70,26 +70,26 @@ public class GeoLocationTest {
 
     @Test
     public void isEventReader() throws XMLStreamException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8081/", "");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "");
         Assert.assertEquals(geoLocator.isEventReader(), true);
     }
 
     @Test
     public void isNotEventReader() throws XMLStreamException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8081/", "4.2.2.2");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "4.2.2.2");
         Assert.assertEquals(geoLocator.isEventReader(), false);
     }
 
     @Test
     public void xmlParsingOk() throws XMLStreamException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8081/", "");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "");
         geoLocator.isEventReader();
         Assert.assertEquals(geoLocator.xmlParsing(), true);
     }
 
     @Test
     public void xmlParsingNotOk() throws XMLStreamException {
-        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8081/", "4.2.2.2");
+        GeoLocatorImpl geoLocator = new GeoLocatorImpl("http://localhost:8080/", "4.2.2.2");
         Assert.assertEquals(geoLocator.xmlParsing(), false);
     }
 
