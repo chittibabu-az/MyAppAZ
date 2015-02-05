@@ -87,7 +87,17 @@
             <name>${project.name}-dev</name>
             <post>${project.name}-dev@example.com</post>
         </mailingList>
-    </mailingLists>
+    </mailingLists>    
+    <repositories>
+        <repository>
+           <id>CLAESTOR</id>
+           <name>CLAESTOR-snapshots</name>
+           <snapshots>
+                      <enabled>true</enabled>
+           </snapshots>
+           <url>http://localhost:8081/artifactory/snapshots</url>
+        </repository>
+      </repositories>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -128,7 +138,13 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>fluent-hc</artifactId>
             <version>4.3.2</version>
-        </dependency>        
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.5</version>
+            <type>maven-plugin</type>
+          </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
